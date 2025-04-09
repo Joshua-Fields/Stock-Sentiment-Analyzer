@@ -1,8 +1,8 @@
 import psycopg2
 import os
 
-
 def get_connection():
+    """Establish a connection to the PostgreSQL database using environment variables."""
     return psycopg2.connect(
         host=os.environ["DB_HOST"],
         port=os.environ.get("DB_PORT", "5432"),
@@ -11,8 +11,8 @@ def get_connection():
         password=os.environ["DB_PASSWORD"]
     )
 
-
 def create_table():
+    """Create the stock_sentiment table if it does not already exist."""
     conn = get_connection()
     cur = conn.cursor()
 
