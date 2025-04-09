@@ -1,0 +1,8 @@
+praw
+vaderSentiment
+pandas
+streamlit
+psycopg2-binary
+python-dotenv
+matplotlib
+wordcloud

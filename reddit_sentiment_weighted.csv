@@ -1,0 +1,33 @@
+ticker,sentiment_raw,sentiment_weighted,post_score,num_comments,title
+US,0.011952499999999998,0.9781686949999997,26946,20,China announces 84% retaliatory tariffs on US goods
+BREAK,0.022995000000000005,0.290311875,3875,20,BREAKING NEWS: Trump Says Tariffs Paused for 90 Days on Non-Retaliating Countries
+ING,0.022995000000000005,0.290311875,3875,20,BREAKING NEWS: Trump Says Tariffs Paused for 90 Days on Non-Retaliating Countries
+NEWS,0.022995000000000005,0.290311875,3875,20,BREAKING NEWS: Trump Says Tariffs Paused for 90 Days on Non-Retaliating Countries
+AMZN,0.038447499999999996,0.37455554499999993,2914,20,"AMZN is down to ~170$, the same price as 4.5 years ago."
+EU,-0.013412499999999999,-0.0727628125,1475,20,EU announces first set of retaliatory tariffs - 25% on a range of US goods
+US,-0.013412499999999999,-0.0727628125,1475,20,EU announces first set of retaliatory tariffs - 25% on a range of US goods
+US,0.013654999999999997,0.5940880849999999,14169,20,Trump says US will soon announce tariffs on pharmaceutical imports
+TSMC,-0.025005,-0.31111220999999994,3814,20,Trump says he told TSMC it would pay 100% tax if it doesn't build in US
+US,-0.025005,-0.31111220999999994,3814,20,Trump says he told TSMC it would pay 100% tax if it doesn't build in US
+WSB,0.10470750000000001,0.5570439,1440,20,Is WSB full of it? 3M view of 10y treasuries that are being posted
+US,0.005380000000000002,0.008591860000000003,199,20,"Summary list of US tariffs on Canada, EU, and China + their response - including export and import figures from 2024"
+EU,0.005380000000000002,0.008591860000000003,199,20,"Summary list of US tariffs on Canada, EU, and China + their response - including export and import figures from 2024"
+BULLE,-0.2963944444444444,-0.32218076111111105,84,9,I dodged a Major fucking BULLET HOLY SHIT 😭😭
+HOLY,-0.2963944444444444,-0.32218076111111105,84,9,I dodged a Major fucking BULLET HOLY SHIT 😭😭
+SHIT,-0.2963944444444444,-0.32218076111111105,84,9,I dodged a Major fucking BULLET HOLY SHIT 😭😭
+SPY,0.3702375,0.319144725,34,4,"$11,800 gains in 10 minutes on SPY and QQQ calls"
+QQQ,0.3702375,0.319144725,34,4,"$11,800 gains in 10 minutes on SPY and QQQ calls"
+AMZN,0.1259375,0.1164921875,35,8,$4205 AMZN puts
+ODTE,-0.009487500000000001,-0.0079220625,25,4,$69 - 10k in 35mins on ODTEs
+SMH,-0.23005,-0.21279625,20,11,Punching the air right now. sold too soon…. SMH
+YOU,0.013702499999999998,0.07791241499999997,1562,20,"Why YOU as a degenerate, should be trading SPX instead of SPY"
+SPX,0.013702499999999998,0.07791241499999997,1562,20,"Why YOU as a degenerate, should be trading SPX instead of SPY"
+SPY,0.013702499999999998,0.07791241499999997,1562,20,"Why YOU as a degenerate, should be trading SPX instead of SPY"
+SWEAT,0.060250000000000005,0.06440725,23,20,SWEATSHOP TRADE 🇻🇳
+SHOP,0.060250000000000005,0.06440725,23,20,SWEATSHOP TRADE 🇻🇳
+TRADE,0.060250000000000005,0.06440725,23,20,SWEATSHOP TRADE 🇻🇳
+US,0.19156666666666666,0.22030166666666665,105,9,Shorting the US since 24
+WE,0.14687250000000002,0.2878701,320,20,WE RIDE AT DAWN
+RIDE,0.14687250000000002,0.2878701,320,20,WE RIDE AT DAWN
+AT,0.14687250000000002,0.2878701,320,20,WE RIDE AT DAWN
+DAWN,0.14687250000000002,0.2878701,320,20,WE RIDE AT DAWN
