@@ -2,7 +2,7 @@ name: Update sentiment
 
 on:
   schedule:
-    - cron: "0 * * * *"   # runs hourly
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -11,13 +11,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Install dependencies
         run: pip install -r requirements.txt
-      
-      - name: Install + start IPv6 tunnel
+
+      - name: Setup IPv6 networking
         uses: crazy-max/ghaction-setup-ipv6@v3
-      
+
       - name: Run sentiment update
         run: python update_sentiment.py
         env:
@@ -26,4 +26,3 @@ jobs:
           DB_NAME: ${{ secrets.DB_NAME }}
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-
