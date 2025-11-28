@@ -2,8 +2,8 @@ name: Update sentiment
 
 on:
   schedule:
-    - cron: "0 * * * *"
-  workflow_dispatch:
+    - cron: "0 * * * *"   # runs hourly
+  workflow_dispatch:      # allows manual run from GitHub UI
 
 jobs:
   update:
@@ -11,11 +11,35 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Print raw env values (NO PASSWORD)
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Debug environment (connection test)
         run: |
           echo "DB_HOST=$DB_HOST"
           echo "DB_PORT=$DB_PORT"
           echo "DB_NAME=$DB_NAME"
           echo "DB_USER=$DB_USER"
-      
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+
+      - name: Run sentiment update
+        run: python update_sentiment.py
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
