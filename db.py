@@ -5,7 +5,7 @@ def get_connection():
     """Establish a connection to the PostgreSQL database using environment variables."""
     return psycopg2.connect(
         host=os.environ["DB_HOST"],
-        port=os.environ.get("DB_PORT", "5432"),
+        port=os.environ.get("DB_PORT", "6543"),
         dbname=os.environ["DB_NAME"],  # PostgreSQL expects `dbname` not `database`
         user=os.environ["DB_USER"],
         password=os.environ["DB_PASSWORD"],
