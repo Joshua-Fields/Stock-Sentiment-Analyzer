@@ -6,10 +6,12 @@ def get_connection():
     return psycopg2.connect(
         host=os.environ["DB_HOST"],
         port=os.environ.get("DB_PORT", "5432"),
-        database=os.environ["DB_NAME"],
+        dbname=os.environ["DB_NAME"],  # PostgreSQL expects `dbname` not `database`
         user=os.environ["DB_USER"],
-        password=os.environ["DB_PASSWORD"]
+        password=os.environ["DB_PASSWORD"],
+        sslmode="require"   # 🚨 This is the critical missing line
     )
+
 
 def create_table():
     """Create the stock_sentiment table if it does not already exist."""
