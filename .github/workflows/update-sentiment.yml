@@ -11,21 +11,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
+      
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Ensure IPv6 is enabled
-        run: |
-          sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0
-          sudo sysctl -w net.ipv6.conf.default.disable_ipv6=0
-
-      - name: Test Supabase reachability (IPv6)
-        run: |
-          ping -6 ${{ secrets.DB_HOST }} -c 4 || echo "IPv6 ping failed"
-
+        run: pip install -r requirements.txt
+      
+      - name: Install + start IPv6 tunnel
+        uses: crazy-max/ghaction-setup-ipv6@v3
+      
       - name: Run sentiment update
         run: python update_sentiment.py
         env:
