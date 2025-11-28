@@ -4,11 +4,12 @@ import os
 def get_connection():
     return psycopg2.connect(
         host=os.environ["DB_HOST"],
-        port=os.environ.get("DB_PORT", "5432"),
+        port=os.environ.get("DB_PORT", "6543"),
         dbname=os.environ["DB_NAME"],
-        user=os.environ["DB_USER"],
-        password=os.environ["DB_PASSWORD"],  # 👈 corrected
-        sslmode="require"
+        user="postgres",  # 👈 must be this
+        password=os.environ["DB_PASSWORD"],
+        sslmode="require",
+        pool_mode="transaction"  # optional, doesn't hurt, not required
     )
 
 
